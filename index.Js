@@ -18,13 +18,13 @@ botaoParar.addEventListener('click', Parar);
 
 function cronometrar() {
     segundos++;
-    if(segundos == 60){
+    if(segundos == "60"){
         minutos++;
         minutosEl.innerHTML = minutos;
         segundos = "00";
     }
     segundosEl.innerHTML = segundos;
-    if(minutos == 60) {
+    if(minutos == "60") {
         horas++;
         horasEl.innerHTML = horas;
         minutosEl = "00";
