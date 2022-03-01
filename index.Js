@@ -29,6 +29,7 @@ function cronometrar() {
         horasEl.innerHTML = horas;
         minutosEl = "00";
     }
+    minutosEl.innerHTML = minutos;
     timer(); 
 }
 
