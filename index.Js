@@ -16,6 +16,8 @@ botaoIniciar.addEventListener('click', cronometrar);
 botaoZerar.addEventListener('click', Zerar);
 botaoParar.addEventListener('click', Parar);
 
+//funcoes
+
 function cronometrar() {
     segundos++;
     if(segundos == "60"){
@@ -27,7 +29,7 @@ function cronometrar() {
     if(minutos == "60") {
         horas++;
         horasEl.innerHTML = horas;
-        minutosEl = "00";
+        minutos = "00";
     }
     minutosEl.innerHTML = minutos;
     timer(); 
