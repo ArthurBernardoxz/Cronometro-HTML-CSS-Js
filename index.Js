@@ -6,10 +6,10 @@ let botaoZerar = document.querySelector("#botaozerar");
 let horasEl = document.querySelector("#horas");
 let minutosEl = document.querySelector("#minutos");
 let segundosEl = document.querySelector("#segundos");
-let segundos = 0;
-let minutos = 0;
-let horas = 0;
-let parar = 0;
+let segundos = "00";
+let minutos = "00";
+let horas = "00";
+let parar = "00";
 
 //atribuicao de eventos
 botaoIniciar.addEventListener('click', cronometrar);
@@ -21,15 +21,14 @@ function cronometrar() {
     if(segundos == 60){
         minutos++;
         minutosEl.innerHTML = minutos;
-        segundos = 0;
+        segundos = "00";
     }
     segundosEl.innerHTML = segundos;
     if(minutos == 60) {
         horas++;
         horasEl.innerHTML = horas;
-        minutos = 0;
+        minutosEl = "00";
     }
-    minutosEl.innerHTML = minutos;
     timer(); 
 }
 
@@ -38,12 +37,12 @@ function timer() {
 }
 
 function Zerar() {
-    horasEl.innerHTML = "0";
-    minutosEl.innerHTML = "0";
-    segundosEl.innerHTML = "0";
-    segundos = 0;
-    minutos = 0;
-    horas = 0;
+    horasEl.innerHTML = "00";
+    minutosEl.innerHTML = "00";
+    segundosEl.innerHTML = "00";
+    segundos = "00";
+    minutos = "00";
+    horas = "00";
 }
 
 function Parar() {
