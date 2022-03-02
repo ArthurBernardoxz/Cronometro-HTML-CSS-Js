@@ -20,5 +20,24 @@ Em relação a tamanho e outras propriedades, defini da forma que mais me agrado
 
 Para o crônometro iniciar primeiro peguei cada `<span>` dos tempos (segundos,minutos e horas) e atribui a uma variável dentro do JavaScript através do `document.querySelector()`, fiz o mesmo para cada botão, para depois ligar a um evento.
 
-### Função para começar a crônometrar: ###
+### Função para começar a contar: ###
 
+Atribui um evento ao quando o `<button>` de iniciar fosse clicado, como os `<span>` nãoo possibilitavam realizar operações com o `innerHTML` então cirei ariáveis para os segundos, os minutos e as horas todas iniciadas com 0.
+
+A função inicia adicionando 1 no segundos, em seguida verifica se ele é igual a 60, caso verdadeiro nos minutos são adicionados 1, em seguida o **innerHTML** do `<span>` de minutos é igual a váriavel minutos e os segundos são zerados novamente. Depois igualo o **innerHTML** do `<span>` de segundos a varíavel de segundos e depois faço a mesma verificação para os miinutos, caso seja igual a 60, as horas mudam e os minutos zeram.
+
+Utilizei recursividade indireta para o crônometro continuar contando, criando outra função e utilizando a função do Js `setTimeout(função_cronometrar, 1000)`.
+
+### Função para zerar o cronômetro: ###
+
+Quando o usuário clicar no botão zerar o `innerHTML` do `<span>` dos segundos, minutos e horas é **00** e as variáveis utilizadas na função cronometrar também zeram.
+
+### Função para parar o cronômetro: ###
+
+Ele faz a recursividade para a função cronometrar parar. Dessa forma:
+
+```
+function Parar() {
+    clearTimeout(x) // onde x é a váriavel que realiza a recursividade.
+}
+```
